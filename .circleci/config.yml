@@ -9,8 +9,12 @@ jobs:
   test:
     docker:
       - image: circleci/node
+      - image: mongo
+        environment:
+          MONGO_DB: contests
     steps:
       - checkout
+      - run: yarn install
       - run: yarn test
 workflows:
   version: 2
