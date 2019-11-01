@@ -11,7 +11,7 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      - run: echo "TESTING"
+      - run: yarn test
 
 workflows:
   version: 2
