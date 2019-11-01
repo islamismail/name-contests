@@ -6,12 +6,12 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-    test:
-      docker:
-        - image: circleci/node
-      steps:
-        - checkout
-        - run: echo "TESTING"
+  test:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run: echo "TESTING"
 
 workflows:
   version: 2
